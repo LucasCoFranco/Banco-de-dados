@@ -48,3 +48,36 @@ select dsprod, dsprod from produto;
 
 --modificação de estrutura da tabela: alter table
 --remove uma tabela com todas as suas tuplas: drop table
+
+Para adicionar um apelido para facilitar para o usuário
+select dsprod as produto, prvenda as preço from produto
+
+Para ordenar por alguma ordem desejada ,basta usar o order by
+select dsprod as produto, prvenda as preço from produto
+order by dsprod, prvenda;
+
+se quiser decrescente
+select dsprod as produto, prvenda as preço from produto
+order by dsprod desc
+
+////////////////////////////////////////////////////////////////////////////
+Criando nova tabela
+create table usuario
+(
+	user char(8) not NULL PRIMARY KEY,
+	password char (20)
+);
+INSERT INTO usuario VALUES ('admin', 'admin'), ('afsilva','12345678'), ('gerente', 'gera');
+
+Para ver quantas linhas tem o banco de dados
+SELECT count (*) FROM usuario
+
+e para ver se tem algo na tabela em especifico
+SELECT count (*) FROM usuario
+where user = 'afsilva'
+	and password = '12345678';
+   --se o contador der 1, é porque tem uma linha com essa informações
+
+SQL INJECTION
+SELECT count (*) from usuario WHERE user = 'sapato' or 1=1 --and password = 'abc123';
+--Como o hacker coloca o --na senha, o banco vai entender como um comentario, então ele vai validar o acesso pois 1=1 é correto
