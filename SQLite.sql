@@ -12,7 +12,7 @@ Na aba Executar SQL, vamos começar a programar
 
 create table produto
  (
-    codprod integer not null primary key, #valor não nulo e de chave primaria
+    codprod integer not null primary key, --valor não nulo e de chave primaria
     dsprod varchar(100), #
     saldo integer,
     sldmin integer,
@@ -31,7 +31,7 @@ agora salvar o script no terceiro icone e salvar como script01
  
  outra maneira de colocar dados no banco é
  insert into produto values
- (102, 'Papel Toalha', 109, 300, 5.75, 3.10); #dessa maneira, o banco de dados armazena os dados na sequencia, primeiro valor vai para a primeira coluna
+ (102, 'Papel Toalha', 109, 300, 5.75, 3.10); --dessa maneira, o banco de dados armazena os dados na sequencia, primeiro valor vai para a primeira coluna
 
  outra maneira mais rapida para adicionar varios dados
 
@@ -41,7 +41,7 @@ agora salvar o script no terceiro icone e salvar como script01
  (495, 'Alvejante Ipê', 3200, 3000, 2.76, 1.20);
 
 Comando para listar as informações
-select * from produto; #o asterisco é um coringa que vai mostrar todos os dados da tabela
+select * from produto; --o asterisco é um coringa que vai mostrar todos os dados da tabela
 
 porém isso faz com que a maquina use muito processamento na hora de mostrar, então o recomendado é pedir somente o que é necessário
 select dsprod, dsprod from produto;
