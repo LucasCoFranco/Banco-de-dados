@@ -12,7 +12,7 @@ Na aba Executar SQL, vamos começar a programar
 
 create table produto
  (
-    codprod integer not null primary key, --valor não nulo e de chave primaria
+    codprod integer not null primary key, --valor não nulo e de chave primaria --not null: obrigatório ter algo, se não o banco não aceita
     dsprod varchar(100), #
     saldo integer,
     sldmin integer,
@@ -46,3 +46,5 @@ select * from produto; --o asterisco é um coringa que vai mostrar todos os dado
 porém isso faz com que a maquina use muito processamento na hora de mostrar, então o recomendado é pedir somente o que é necessário
 select dsprod, dsprod from produto;
 
+--modificação de estrutura da tabela: alter table
+--remove uma tabela com todas as suas tuplas: drop table

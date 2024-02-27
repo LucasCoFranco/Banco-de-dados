@@ -23,3 +23,15 @@ O banco de dados relacional dificulta o uso de duas maquinas para operar um só 
 
 SGBD - Sistema Gerenciador de Banco de Dados
 posibilita que Aplicativos, Usuários finais e DBA possam interagir com o banco de dados
+
+tipos de linguagem do sql
+ddl - definição de dados
+dcl - controle de dados
+dml - manipulação de dados
+dql - requisição de dados
+dtl - transição de dados
+
+Deve-se ter conexão do aplicativo com o sistema de banco de dados para ter acesso ao banco de dados e ocorrer tudo como esperado.
+E no final da conexão, deve-se encerrar a conexão, se não ocorrerá o buffer overflow, fazendo com que o espaço na memória ram não seja liberado. Isso acontece muito no site do Enem e em sites de shows e atrações, onde é muito dificil acessar as coisas por conta do alto numero de requisições do bd porém sem encerramento da conexão
+
+Buffer Overflow - É uma anomalia onde um programa, ao escrever dados em um buffer, ultrapassa os limites do buffer e sobrescreve a memória adjacente.
