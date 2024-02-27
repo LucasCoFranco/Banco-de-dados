@@ -1,8 +1,20 @@
 Dado e Informação
 Dado é um sinal, não tem significado se analisado de forma isolada
 ex: lucas, 350, 4, 2
-Infomarção é um conjunto de dados com significado
+Infomarção é um conjunto de dados com significado dentro de um contexto
 ex: Lucas fez 350 scripts para monitorar a rede de computadores da empresa ABC. Ele levou 4 semanas e 2 dias para completar a tarefa
 
 risco do MySQL : o MySQL vem por padrão depois de instalado com o login e a senha: login:root senha:
 Firebird também tem esse risco: login:sysdba senha:masterkey
+
+Arquivos sequencias - Para eu ter Informação, é necessario ler todas as linhas, linha a linha por exemplo arquivos txt
+Arquivos indexados - São arquivos que são criados ou classificados tendo como ponto de referência índices ou outras chaves de atribuição.
+Arquivos sequencial indexados - Possui um indice que facilita a pesquisa por exemplo search
+Arquivos relativos - Um arquivo de registro relativo contém registros ordenados por sua chave relativa, um número de registro que representa a localização do registro em relação a onde o arquivo começa.
+
+Banco de dados relacional e não relacional
+
+Banco de dados não relacional - Ex Google Maps
+
+estrutura de dados - grafos
+algoritmo- busca em profundidade
