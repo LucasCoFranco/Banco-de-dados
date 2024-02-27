@@ -22,3 +22,4 @@ algoritmo- busca em profundidade. O usuario interage pelo celular para saber ond
 O banco de dados relacional dificulta o uso de duas maquinas para operar um só banco, porque fica dificil separar duas tabelas em duas
 
 SGBD - Sistema Gerenciador de Banco de Dados
+posibilita que Aplicativos, Usuários finais e DBA possam interagir com o banco de dados
