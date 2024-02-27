@@ -35,3 +35,6 @@ Deve-se ter conexão do aplicativo com o sistema de banco de dados para ter aces
 E no final da conexão, deve-se encerrar a conexão, se não ocorrerá o buffer overflow, fazendo com que o espaço na memória ram não seja liberado. Isso acontece muito no site do Enem e em sites de shows e atrações, onde é muito dificil acessar as coisas por conta do alto numero de requisições do bd porém sem encerramento da conexão
 
 Buffer Overflow - É uma anomalia onde um programa, ao escrever dados em um buffer, ultrapassa os limites do buffer e sobrescreve a memória adjacente.
+
+Duas coisas que causam lentidão no banco de dados: *Programação errada que não encerra conexão
+                                                    *
