@@ -18,3 +18,7 @@ Banco de dados não relacional - Ex Google Maps
 
 estrutura de dados - grafos
 algoritmo- busca em profundidade. O usuario interage pelo celular para saber onde deseja ir e o caminho mais rapido (mesmo que seja um caminho mais longo)
+
+O banco de dados relacional dificulta o uso de duas maquinas para operar um só banco, porque fica dificil separar duas tabelas em duas
+
+SGBD - Sistema Gerenciador de Banco de Dados
