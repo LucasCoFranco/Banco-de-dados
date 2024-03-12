@@ -59,3 +59,5 @@ Comandos para alteração na tabela devem ser feitos em um nova aba para não te
 
 maneira mais correta de trafegar na rede quando esta requisitando os dados do banco de dados devem ser sempre filtrados, pois se não pode gerar muita memoria e congestionamento na rede por trafego alteração
 ex do que usar: select codpord, dsprod from produto;
+
+//////////////////////////////////////////////////////////////////////////////
