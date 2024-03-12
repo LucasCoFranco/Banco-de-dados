@@ -38,3 +38,24 @@ Buffer Overflow - É uma anomalia onde um programa, ao escrever dados em um buff
 
 Duas coisas que causam lentidão no banco de dados: *Programação errada que não encerra conexão
                                                     *
+
+Modelagem de dados - evitar a redundancia
+Salvar unidade sempre por sigla de unidade - teoria do mao de vaca
+    ex - ao inves de escrever quilograma, escrever KG
+
+Tipos de relacionamento entre as tabelas
+1 x N 
+N x N 
+1 x 1 
+
+////////////////////////////////////////////////////////////////////////
+foreign key serve para referenciar um dado de outra tabela
+exemplo
+foreign key (un) references UnidadeMedida(un)
+
+////////////////////////////////////////////////////////////////////////
+Comandos para alteração na tabela devem ser feitos em um nova aba para não ter risco de selecionar errado e ter um  prejuizo grande
+////////////////////////////////////////////////////////////////////////
+
+maneira mais correta de trafegar na rede quando esta requisitando os dados do banco de dados devem ser sempre filtrados, pois se não pode gerar muita memoria e congestionamento na rede por trafego alteração
+ex do que usar: select codpord, dsprod from produto;
