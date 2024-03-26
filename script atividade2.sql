@@ -112,10 +112,6 @@ INSERT INTO horario VALUES
 (96, 12, 80, 4, 33),
 (97, 12, 81, 5, 43);
 
-DROP TABLE horario;
-
-DROP TABLE professor;
-
 create table professor (
 	ID PRIMARY KEY NOT NULL,
 	nome varchar (20)
@@ -284,15 +280,6 @@ INSERT INTO materia VALUES
 (79, 'SSORC II'),
 (80, 'EstAvSI'),
 (81, 'FDWeb');
-
-///////////////////////////////////////////////////////////////////////
-teste
-Select curso.curso, materia.mat, dia.diasem, professor.nome from horario
-inner join curso, materia, dia, professor ON curso.curso=horario.curso,
-materia.mat=horario.materia,
-dia.diasem=horario.diasem,
-professor.nome=horario.professor;
-
 
 /////////////////////////////////////////////////////////////////////////
 SELECT h.ID, c.curso, m.mat, d.diasem, p.nome as "Professor" FROM horario h
