@@ -127,7 +127,7 @@ CREATE TABLE dia (
 
 CREATE TABLE materia (
 	ID INTEGER PRIMARY key NOT NULL,
-	  varchar (12)
+	mat  varchar (12)
 );
 
 INSERT INTO dia VALUES
