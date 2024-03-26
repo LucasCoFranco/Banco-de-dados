@@ -13,6 +13,7 @@ CREATE TABLE horario (
 
 INSERT INTO horario VALUES
 -u
+--id, curso, mat, dia, prof
 (1, 1, 1, 1, 1),
 (2, 1, 2, 1, 2),
 (3, 1, 3, 2, 3),
@@ -20,7 +21,42 @@ INSERT INTO horario VALUES
 (5, 1, 5, 3, 5),
 (6, 1, 5, 4, 5),
 (7, 1, 6, 4, 6),
-(8, 1, 7, 5, 7);
+(8, 1, 7, 5, 7),
+(9, 2, 8, 1, 5),
+(10, 2, 9, 1, 8),
+(11, 2, 10, 2, 9),
+(12, 2, 11, 3, 10),
+(13, 2, 12, 3, 11),
+(14, 2, 8, 4, 5),
+(15, 2, 13, 4, 2),
+(16, 2, 14, 5, 12),
+(17, 3, 15, 1, 13),
+(18, 3, 16, 1, 7),
+(19, 3, 17, 1, 14),
+(20, 3, 18, 2, 15),
+(21, 3, 19, 3, 6),
+(22, 3, 20, 3, 12),
+(23, 3, 21, 4, 16),
+(24, 3, 17, 4, 14),
+(25, 3, 22, 5, 17),
+(26, 3, 16, 5, 7),
+(27, 4, 23, 1, 7),
+(28, 4, 24, 1, 18),
+(29, 4, 25, 2, 19),
+(30, 4, 26, 3, 20),
+(31, 4, 27, 4, 18),
+(32, 4, 23, 4, 7),
+(33, 4, 28, 5, 13),
+(34, 4, 29, 5, 17),
+(35, 5, 30, 1, 21),
+(36, 5, 31, 1, 22),
+(37, 5, 32, 2, 23),
+(38, 5, 33, 2, 24),
+(39, 5, 30, 3, 21),
+(40, 5, 34, 3, 25),
+(41, 5, 35, 4, 20),
+(42, 5, 36, 5, 14),
+(43, 6, 36, 5, 14),
 
 DROP TABLE horario;
 
@@ -204,3 +240,11 @@ inner join curso, materia, dia, professor ON curso.curso=horario.curso,
 materia.mat=horario.materia,
 dia.diasem=horario.diasem,
 professor.nome=horario.professor;
+
+
+/////////////////////////////////////////////////////////////////////////
+SELECT h.ID, c.curso, m.mat, d.diasem, p.nome as "Professor" FROM horario h
+left join curso c on h.curso=c.ID
+left join dia d on h.diasem=d.ID
+left JOIN materia m on h.materia=m.ID
+LEFT JOIN professor p on h.professor=p.ID;
