@@ -38,3 +38,10 @@ deletar de UnidadeMedida os dados que possuem un
 update UnidadeMedida set un = 'K' where un = 'KG';
 select * from produto where un = 'KG';
 atualizar dados 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+SELECT h.ID, c.curso, m.mat, d.diasem, p.nome as "Professor" FROM horario h
+left join curso c on h.curso=c.ID
+left join dia d on h.diasem=d.ID
+left JOIN materia m on h.materia=m.ID
+LEFT JOIN professor p on h.professor=p.ID;
