@@ -12,8 +12,6 @@ CREATE TABLE horario (
 
 
 INSERT INTO horario VALUES
--u
---id, curso, mat, dia, prof
 (1, 1, 1, 1, 1),
 (2, 1, 2, 1, 2),
 (3, 1, 3, 2, 3),
