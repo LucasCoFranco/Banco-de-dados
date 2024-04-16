@@ -8,8 +8,24 @@ un char(4),
 prvenda numeric(10,2),
 prcusto numeric(10,2),
 foreign key (un) references UnidadeMedida(un)
-
+on update cascade
 
 foreign key (un) references UnidadeMedida(un)
 qual a unidade que vai referenciar outra tabela (un) 
 (dessa tabela produto)
+
+on update cascade
+serve para quando houver uma alteração de uma tabela, ele altera nessa tabela tambem
+
+
+Update UnidadeMedida
+Set un = 'K'
+where un = 'KG';
+atualização de dado, mudando o KG para K
+
+A tabela UnidadeMedida é a tabela pai, pois as tabelas que tem muitos parametros, são consideradas tabelas filhos
+
+
+
+delete from UnidadeMedida
+where un = 'UN';
