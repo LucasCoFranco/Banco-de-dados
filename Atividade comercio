@@ -1,1 +1,15 @@
+drop table if exists usuario
+o drop table sozinho so da certo se existir a tabela usuario por exemplo, então temos que usar o if exists para que a instrução sql não de erro
 
+create table produto (
+codprod integer not null primary key,
+dsprod varchar(50) not null,
+un char(4),
+prvenda numeric(10,2),
+prcusto numeric(10,2),
+foreign key (un) references UnidadeMedida(un)
+
+
+foreign key (un) references UnidadeMedida(un)
+qual a unidade que vai referenciar outra tabela (un) 
+(dessa tabela produto)
