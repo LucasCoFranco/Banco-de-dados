@@ -110,3 +110,6 @@ INSERT INTO Jogos_Plataforma values
 (25, 5);
 
 INTEGER INTO Detalhes_Pedidos values
+--idpedido, idjogo, quantidade, preco_unitario
+(1, 1, 2, 299.00)
+(1, 1, 2, 299.00)
