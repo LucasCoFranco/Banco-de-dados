@@ -1,5 +1,5 @@
 --idjogo, nome, genero, preço, quantidade disponivel, idtipmidia;
-INSERT INTO jogos VALUES
+INSERT INTO Jogos VALUES
 (1, God of War Ragnarok, ação-aventura, 299.90, 600, 1),
 (2, God of War Ragnarok, ação-aventura, 199.90, 100, 2),
 (3, Grand Theft Auto: San Andreas, ação-aventura, 65.00, 30, 2),
@@ -26,7 +26,7 @@ INSERT INTO jogos VALUES
 (24,Forza Horizon 5, corrida, 299.00, 330, 1);
 (25,Forza Horizon 5, corrida, 249.00, 500, 2);
 
-INSERT INTO plataformas values
+INSERT INTO Plataformas values
 --id, nomeplat
 (1, PC),
 (2, PS4),
@@ -34,7 +34,7 @@ INSERT INTO plataformas values
 (4, XBOX ONE),
 (5, XBOX SERIES),
 
-INSERT INTO jogos_plataforma values
+INSERT INTO Jogos_Plataforma values
 --idjogo, idplataforma
 (1, 2),
 (1, 3),
@@ -108,3 +108,5 @@ INSERT INTO jogos_plataforma values
 (25, 1),
 (25, 4),
 (25, 5);
+
+INTEGER INTO Detalhes_Pedidos values
