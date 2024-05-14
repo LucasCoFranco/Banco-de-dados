@@ -1,3 +1,113 @@
+-- Criação da tabela TipoMidia
+CREATE TABLE TipoMidia (
+    IDTipoMidia INTEGER PRIMARY KEY,
+    Tipo TEXT
+);
+
+-- Inserção dos tipos de mídia (Físico e Online)
+INSERT INTO TipoMidia (Tipo) VALUES ('Físico');
+INSERT INTO TipoMidia (Tipo) VALUES ('Online');
+
+-- Criação da tabela Jogos
+CREATE TABLE Jogos (
+    IDJogo INTEGER PRIMARY KEY,
+    Nome TEXT,
+    Genero TEXT,
+    Preco REAL,
+    Quantidade_Disponivel INTEGER,
+    IDTipoMidia INTEGER,
+    FOREIGN KEY (IDTipoMidia) REFERENCES TipoMidia(IDTipoMidia)
+);
+
+-- Criação da tabela Plataformas
+CREATE TABLE Plataformas (
+    IDPlataforma INTEGER PRIMARY KEY,
+    Nome TEXT
+);
+
+-- Criação da tabela Jogos_Plataformas (tabela de junção)
+CREATE TABLE Jogos_Plataformas (
+    IDJogo INTEGER,
+    IDPlataforma INTEGER,
+    FOREIGN KEY (IDJogo) REFERENCES Jogos(IDJogo),
+    FOREIGN KEY (IDPlataforma) REFERENCES Plataformas(IDPlataforma),
+    PRIMARY KEY (IDJogo, IDPlataforma)
+);
+
+-- Criação da tabela Clientes
+CREATE TABLE Clientes (
+    IDCliente INTEGER PRIMARY KEY,
+    Nome TEXT,
+    Email TEXT,
+    Endereoo TEXT
+);
+
+-- Criação da tabela Pedidos
+CREATE TABLE Pedidos (
+    IDPedido INTEGER PRIMARY KEY,
+    IDCliente INTEGER,
+    Data_Pedido DATE,
+    IDStatus INTEGER,
+    FOREIGN KEY (IDCliente) REFERENCES Clientes(IDCliente),
+	FOREIGN KEY (IDStatus) REFERENCES Status(IDStatus)
+);
+
+-- Criação da tabela Detalhes_Pedido (tabela de junção)
+CREATE TABLE Detalhes_Pedido (
+    IDPedido INTEGER,
+    IDJogo INTEGER,
+    Quantidade INTEGER,
+    Preco_Unitario REAL,
+    FOREIGN KEY (IDPedido) REFERENCES Pedidos(IDPedido),
+    FOREIGN KEY (IDJogo) REFERENCES Jogos(IDJogo),
+    PRIMARY KEY (IDPedido)
+);
+
+--Criação da Tabela Status
+CREATE TABLE Status (
+	IDStatus INTEGER PRIMARY KEY NOT NULL,
+	Status TEXT
+);
+
+============================================================================================================================================================
+
+INSERT INTO Clientes (Nome, Email, Endereço) 
+VALUES (
+('João Silva', 'joao@email.com', 'Rua das Flores, 123'),
+('Maria Santos', 'maria@email.com', 'Avenida Principal, 456'),
+('José Oliveira', 'jose@email.com', 'Praça Central, 789'),
+('Ana Pereira', 'ana@email.com', 'Alameda das Árvores, 321'),
+('Pedro Fernandes', 'pedro@email.com', 'Avenida das Montanhas, 654'),
+('Carla Rodrigues', 'carla@email.com', 'Rua do Comércio, 987'),
+('Márcio Almeida', 'marcio@email.com', 'Avenida dos Lagos, 741'),
+('Fernanda Costa', 'fernanda@email.com', 'Praça da Liberdade, 852'),
+('Rafaela Lima', 'rafaela@email.com', 'Rua dos Coqueiros, 159'),
+('Gustavo Santos', 'gustavo@email.com', 'Avenida das Flores, 753');
+
+
+-- Inserção de 10 pedidos com datas diferentes
+INSERT INTO Pedidos (IDCliente, Data_Pedido, Status)
+VALUES 
+(1, '2024-04-01', 'Em processamento'),
+(2, '2024-04-02', 'Aguardando pagamento'),
+(3, '2024-04-03', 'Em trânsito'),
+(4, '2024-04-04', 'Entregue'),
+(5, '2024-04-05', 'Aguardando retirada'),
+(6, '2024-04-06', 'Cancelado'),
+(7, '2024-04-07', 'Em processamento'),
+(8, '2024-04-08', 'Em trânsito'),
+(9, '2024-04-09', 'Entregue'),
+(10, '2024-04-10', 'Em processamento');
+
+INSERT INTO Status (Status)
+VALUES
+('Em processamento'),
+('Aguardando pagamento'),
+('Em trânsito'),
+('Entregue'),
+('Aguardando retirada'),
+('Cancelado');
+
 --idjogo, nome, genero, preço, quantidade disponivel, idtipmidia;
 INSERT INTO Jogos VALUES
 (1, God of War Ragnarok, ação-aventura, 299.90, 600, 1),
