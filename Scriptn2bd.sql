@@ -138,11 +138,11 @@ INSERT INTO Jogos VALUES
 
 INSERT INTO Plataformas values
 --id, nomeplat
-(1, PC),
-(2, PS4),
-(3, PS5),
-(4, XBOX ONE),
-(5, XBOX SERIES),
+(1, 'PC'),
+(2, 'PS4'),
+(3, 'PS5'),
+(4, 'XBOX ONE'),
+(5, 'XBOX SERIES'),
 
 INSERT INTO Jogos_Plataforma values
 --idjogo, idplataforma
