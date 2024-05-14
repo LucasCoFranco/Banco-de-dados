@@ -72,7 +72,7 @@ CREATE TABLE Status (
 ============================================================================================================================================================
 
 INSERT INTO Clientes (Nome, Email, Endereço) 
-VALUES (
+VALUES 
 ('João Silva', 'joao@email.com', 'Rua das Flores, 123'),
 ('Maria Santos', 'maria@email.com', 'Avenida Principal, 456'),
 ('José Oliveira', 'jose@email.com', 'Praça Central, 789'),
@@ -132,8 +132,8 @@ INSERT INTO Jogos VALUES
 (20, 'Gran Turismo 7', corrida, 259.00, 83, 1),
 (21, 'Gran Turismo 7', corrida, 249.00, 183, 2),
 (22, 'Ghost of Tsushima', ação-aventura, 199.00, 327, 1),
-(23, 'Ghost of Tsushima', ação-aventura, 199.00, 227, 2);
-(24, 'Forza Horizon 5', corrida, 299.00, 330, 1);
+(23, 'Ghost of Tsushima', ação-aventura, 199.00, 227, 2),
+(24, 'Forza Horizon 5', corrida, 299.00, 330, 1),
 (25, 'Forza Horizon 5', corrida, 249.00, 500, 2);
 
 INSERT INTO Plataformas values
@@ -142,7 +142,7 @@ INSERT INTO Plataformas values
 (2, 'PS4'),
 (3, 'PS5'),
 (4, 'XBOX ONE'),
-(5, 'XBOX SERIES'),
+(5, 'XBOX SERIES');
 
 INSERT INTO Jogos_Plataforma values
 --idjogo, idplataforma
