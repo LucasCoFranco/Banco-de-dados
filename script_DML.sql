@@ -148,5 +148,11 @@ INSERT INTO Jogos_Plataformas (IDJogo, IDPlataforma) values
 
 INSERT INTO Detalhes_Pedido (IDPedido, IDJogo, Quantidade, Preço_Unitário) values
 --idpedido, idjogo, quantidade, preco_unitario
-(1, 1, 2, 299.00),
-(1, 1, 2, 299.00);
+(1, 1, 1, 299.00),
+(1, 10, 1, 99.00),
+(2, 4, 1, 89.00),
+(3, 13, 2, 299.00),
+(4, 17, 1, 249.00),
+(4, 19, 1, 249.00),
+(5, 20, 1, 259.00);
+
