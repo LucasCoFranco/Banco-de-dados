@@ -53,7 +53,6 @@ CREATE TABLE Pedidos (
 );
 
 -- Criação da tabela Detalhes_Pedido (tabela de junção)
-drop TABLE Detalhes_Pedido
 CREATE TABLE Detalhes_Pedido (
     IDPedido INTEGER,
     IDJogo INTEGER,
