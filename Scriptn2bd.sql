@@ -39,7 +39,7 @@ CREATE TABLE Clientes (
     IDCliente INTEGER PRIMARY KEY,
     Nome TEXT,
     Email TEXT,
-    Endereoo TEXT
+    Endereco TEXT
 );
 
 -- Criação da tabela Pedidos
@@ -69,9 +69,7 @@ CREATE TABLE Status (
 	Status TEXT
 );
 
-============================================================================================================================================================
-
-INSERT INTO Clientes (Nome, Email, Endereço) 
+INSERT INTO Clientes (Nome, Email, Endereco) 
 VALUES 
 ('João Silva', 'joao@email.com', 'Rua das Flores, 123'),
 ('Maria Santos', 'maria@email.com', 'Avenida Principal, 456'),
