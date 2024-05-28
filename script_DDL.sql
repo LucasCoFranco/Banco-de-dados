@@ -23,7 +23,7 @@ CREATE TABLE Jogos (
 CREATE TABLE Plataformas (
     IDPlataforma INTEGER PRIMARY KEY,
     Nome TEXT
-);'
+);
 
 -- Criação da tabela Jogos_Plataformas (tabela de junção)
 CREATE TABLE Jogos_Plataformas (
