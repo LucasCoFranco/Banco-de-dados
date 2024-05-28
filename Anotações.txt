@@ -61,3 +61,14 @@ maneira mais correta de trafegar na rede quando esta requisitando os dados do ba
 ex do que usar: select codpord, dsprod from produto;
 
 //////////////////////////////////////////////////////////////////////////////
+view de banco de dados
+Serve para resumir as consultas sql
+é um facilitador e uma camada de segurança no banco de dados
+como criar uma view
+
+create view lista as 
+Select
+    bla bla
+from dados
+
+/////////////////////////////////////////////////////////
